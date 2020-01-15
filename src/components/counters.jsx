@@ -4,11 +4,14 @@ import Counter from './counter';
 class Counters extends Component {
     state = {  
         counters: [
-            {id: 1, value:0},
-            {id: 2, value:0},
-            {id: 3, value:0},
+            {id: 1, value:4},
+            {id: 2, value:3},
+            {id: 3, value:2},
             {id: 4, value:0}
         ]
+    }
+    handleIncrement = counter => {
+        console.log(counter);
     }
     handleDelete = (counterId) =>{
         //console.log("DELETE!", counterId)
@@ -23,6 +26,7 @@ class Counters extends Component {
             <Counter 
                 key={counter.id} 
                 onDelete={this.handleDelete} 
+                onIncrement={this.handleIncrement}
                 counter={counter}>
                 <h4>Title #{counter.id}</h4>
             </Counter>
