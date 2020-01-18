@@ -21,7 +21,7 @@ class Counter extends Component {
 
 
     render() { 
-        console.log(this.props);
+        //console.log(this.props);
         //let classes = "badge m-2 badge-";
         //let classes = this.getBadgeClasses();
         //classes += (this.state.count === 0) ? "warning" : "primary";
@@ -51,8 +51,9 @@ class Counter extends Component {
     }
 
     formatCount() {
-        const {count} = this.props.counter.value;
-        return count === 0 ? 'Zero' : count;
+        //const {count} = this.props.counter.value;
+        //return this.props.counter.value;
+        return this.props.counter.value === 0 ? 'Zero' : this.props.counter.value;
     }
 }
  
